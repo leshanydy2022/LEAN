@@ -16,6 +16,6 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-git clone https://github.com/leshanydy2022/luci-theme-bootstrap-mod-17.01.git package/lean/luci-theme-bootstrap-mod
+git clone https://github.com/leshanydy2022/luci-theme-bootstrap-mod.git package/lean/luci-theme-bootstrap-mod
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/lean/luci-app-smartdns
 git clone https://github.com/leshanydy2022/luci-app-adguardhome.git package/lean/luci-app-adguardhome
