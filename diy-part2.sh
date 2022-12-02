@@ -14,3 +14,8 @@
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
 # 设置密码为空
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
+# Modify default theme（FROM luci-theme-bootstrap CHANGE TO luci-theme-bootstrap-mod）
+sed -i 's/luci-theme-bootstrap/luci-theme-bootstrap-mod/g' ./feeds/luci/collections/luci/Makefile
+# 为adguardhome插件更换最新的版本
+rm -rf feeds/packages/net/adguardhome
+git clone https://github.com/leshanydy2022/adguardhome.git feeds/packages/net/adguardhome
