@@ -18,11 +18,6 @@ echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.defau
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 # Install theme
 git clone https://github.com/leshanydy2022/luci-theme-bootstrap-mod.git package/lean/luci-theme-bootstrap-mod
-# Modify default theme（FROM luci-theme-bootstrap CHANGE TO luci-theme-bootstrap-mod）
-sed -i 's/luci-theme-bootstrap/luci-theme-bootstrap-mod/g' ./feeds/luci/collections/luci/Makefile
 # Install app
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/lean/luci-app-smartdns
 git clone https://github.com/leshanydy2022/luci-app-adguardhome.git package/lean/luci-app-adguardhome
-# 为adguardhome插件更换最新的版本
-rm -rf feeds/packages/net/adguardhome
-git clone https://github.com/leshanydy2022/adguardhome.git feeds/packages/net/adguardhome
