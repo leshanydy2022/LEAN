@@ -24,3 +24,6 @@ sed -i 's/luci-theme-bootstrap/luci-theme-bootstrap-mod/g' ./feeds/luci/collecti
 # 为adguardhome插件更换最新的版本
 rm -rf feeds/packages/net/adguardhome
 git clone https://github.com/leshanydy2022/adguardhome.git feeds/packages/net/adguardhome
+# 为smartDNS插件更换最新的版本
+rm -rf feeds/packages/net/smartdns
+git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/smartdns
