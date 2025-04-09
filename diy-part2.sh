@@ -24,8 +24,8 @@ git clone https://github.com/leshanydy2022/luci-app-adguardhome.git feeds/luci/a
 # Modify default theme（FROM luci-theme-bootstrap CHANGE TO luci-theme-bootstrap-mod）
 sed -i 's/luci-theme-bootstrap/luci-theme-bootstrap-mod/g' ./feeds/luci/collections/luci/Makefile
 # 为adguardhome插件更换最新的版本
-# rm -rf feeds/packages/net/adguardhome
-# git clone https://github.com/leshanydy2022/adguardhome.git feeds/packages/net/adguardhome
+rm -rf feeds/packages/net/adguardhome
+git clone https://github.com/leshanydy2022/adguardhome.git feeds/packages/net/adguardhome
 # 为smartDNS插件更换最新的版本
 rm -rf feeds/packages/net/smartdns
 # git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/smartdns
