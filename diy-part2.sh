@@ -16,7 +16,7 @@ sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-defaul
 # 安装新主题 luci-theme-bootstrap-mod
 git clone https://github.com/leshanydy2022/luci-theme-bootstrap-mod.git feeds/luci/themes/luci-theme-bootstrap-mod
 # 安装smartdns和adguardhome
-#git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/lean/luci-app-smartdns
+# git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/lean/luci-app-smartdns
 rm -rf feeds/luci/applications/luci-app-smartdns
 rm -rf feeds/luci/applications/luci-app-adguardhome
 git clone https://github.com/leshanydy2022/luci-app-smartdns.git feeds/luci/applications/luci-app-smartdns
@@ -24,11 +24,11 @@ git clone https://github.com/leshanydy2022/luci-app-adguardhome.git feeds/luci/a
 # Modify default theme（FROM luci-theme-bootstrap CHANGE TO luci-theme-bootstrap-mod）
 sed -i 's/luci-theme-bootstrap/luci-theme-bootstrap-mod/g' ./feeds/luci/collections/luci/Makefile
 # 为adguardhome插件更换最新的版本
-rm -rf feeds/packages/net/adguardhome
-git clone https://github.com/leshanydy2022/adguardhome.git feeds/packages/net/adguardhome
+# rm -rf feeds/packages/net/adguardhome
+# git clone https://github.com/leshanydy2022/adguardhome.git feeds/packages/net/adguardhome
 # 为smartDNS插件更换最新的版本
 rm -rf feeds/packages/net/smartdns
-#git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/smartdns
+# git clone https://github.com/pymumu/openwrt-smartdns.git feeds/packages/net/smartdns
 git clone https://github.com/leshanydy2022/smartdns.git feeds/packages/net/smartdns
 # Modify hostname
 sed -i 's/LEAN/LEAN-YDY/g' package/base-files/files/bin/config_generate
