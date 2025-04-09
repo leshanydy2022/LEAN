@@ -34,6 +34,6 @@ git clone https://github.com/leshanydy2022/smartdns.git feeds/packages/net/smart
 # Modify hostname
 sed -i 's/LEAN/LEAN-YDY/g' package/base-files/files/bin/config_generate
 # Modify filename, add date prefix
-sed -i 's/IMG_PREFIX:=/IMG_PREFIX:=$(shell date +"%Y%m%d")-ssr-23.05/1' include/image.mk
+sed -i 's/IMG_PREFIX:=/IMG_PREFIX:=$(shell date +"%Y%m%d")-/1' include/image.mk
 # Modify ppp-down, add sleep 3. my source code is change, no need this
 sed -i '$a\\sleep 3' package/network/services/ppp/files/lib/netifd/ppp-down
