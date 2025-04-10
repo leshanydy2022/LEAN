@@ -15,7 +15,7 @@ sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_gener
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
 # 安装新主题 luci-theme-bootstrap-mod
 git clone https://github.com/leshanydy2022/luci-theme-bootstrap-mod.git feeds/luci/themes/luci-theme-bootstrap-mod
-sed -i 's/luci-theme-bootstrap/luci-theme-bootstrap-mod/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-bootstrap-mod/g' ./feeds/luci/collections/luci/Makefile
 # 安装smartdns和adguardhome
 # git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/lean/luci-app-smartdns
 rm -rf feeds/luci/applications/luci-app-smartdns
